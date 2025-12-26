@@ -77,7 +77,7 @@ Each waste bin is a self-contained IoT node and must operate for long durations 
 
 # Power Architecture of the Waste Bin
 18650 Li-ion Battery (3.7 V)
-        ↓
+       TO 
 Low Quiescent Current Regulator
-        ↓
+        TO
 3.3 V Rail → ESP32 + Ultrasonic Sensor + LoRa Module
