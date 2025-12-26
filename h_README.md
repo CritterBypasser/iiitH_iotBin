@@ -45,8 +45,3 @@ Optional solar charging can further extend battery life.
 - [ESP32S3 Datasheet] (https://cdn-shop.adafruit.com/product-files/5477/esp32-s3_datasheet_en.pdf)
 - [HC-SR04 Ultrasonic Sensor Datasheet] (https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf) 
 - [LoRa SX127x Datasheet] (https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R0000001Rbr/6EfVZUorrpoKFfvaF_Fkpgp5kzjiNyiAbqcpqh9qSjE)
-
-# Cost
-- ESP32 S3 is [Rs 163] (https://www.digikey.in/en/products/detail/espressif-systems/ESP32-S3/15822445)
-- LoRa SX1278 is [Rs 258] (https://robokits.co.in/wireless-solutions/wireless-automation/433mhz-lora-sx1278-long-range-rf-wireless-module?srsltid=AfmBOooeR_Fk0S_jR67Tin0aKT3XEeGptbabyCAN1kSOIfCycvSDRbaqVNk)
-- HC-SR04 is [Rs 58] (https://shokitech.com/product/ultrasonic-sensor/?srsltid=AfmBOoqIjHFPvqD05Q4rkhDdOeaSh00jXH1uwqa-ZDxWAtISYLQCfgn57do)
