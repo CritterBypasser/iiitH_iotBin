@@ -4,7 +4,7 @@
 2. 4G LTE dongle is [Rs 16] (https://www.desertcart.in/products/334011596-exvist-4g-lte-usb-dongle-w-ec25-af-lcc-modem)
 3. Raspberry Pi 4 Model B is [Rs 2249] (https://www.technoventor.com/product-page/raspberry-pi-cumpute-module-original)
 - Total: Rs 3784
-- 
+
 ## for each wastebin
 1. ESP32 S3 is [Rs 163] (https://www.digikey.in/en/products/detail/espressif-systems/ESP32-S3/15822445)
 2. LoRa SX1278 is [Rs 258] (https://robokits.co.in/wireless-solutions/wireless-automation/433mhz-lora-sx1278-long-range-rf-wireless-module?srsltid=AfmBOooeR_Fk0S_jR67Tin0aKT3XEeGptbabyCAN1kSOIfCycvSDRbaqVNk)
