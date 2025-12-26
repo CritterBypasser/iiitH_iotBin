@@ -14,3 +14,70 @@ The entire system is battery-powered, optimized using deep sleep modes and perio
 - Large industrial dumpsters
 - Safety-critical systems
 - Research deployments
+
+# Why a Gateway is Required
+In a large-scale IoT deployment (the 100 smart waste bins), individual sensor nodes are designed to be low-power, low-cost, and long-range, which limits their ability to directly connect to the internet.
+
+A gateway is required to act as an intermediate aggregation point between the waste bins and the cloud backend.
+
+## Key reasons for using a gateway:
+- Enables long-range communication using low-power protocols such as LoRa
+- Aggregates data from hundreds of bins
+- Offloads internet connectivity from battery-powered nodes
+- Improves scalability and network reliability
+- Reduces power consumption at the bin level
+- Each waste bin communicates only with the gateway, while the gateway handles all cloud communication.
+
+# Components of the Gateway
+The gateway is a fixed infrastructure device and is typically mains-powered.
+
+## Core Gateway Components
+1. LoRa Concentrator Module
+   - Example: SX1302
+   - Receives data from hundreds of LoRa nodes simultaneously
+   - Supports multiple channels and spreading factors
+
+2. Host Processor
+   - Raspberry Pi
+   - Runs packet forwarding and network management software
+   - Handles data preprocessing and security
+
+3. Internet Backhaul Interface
+   - Wi-Fi, or 4G/LTE
+   - Connects the gateway to the cloud server
+
+4. High-Gain LoRa Antenna
+   - Improves coverage and reliability
+   - Typically mounted on poles or rooftops
+
+5. Power Supply
+   - Mains power with optional battery backup (UPS)
+
+# Battery Pack Used in the Waste Bin Node
+Each waste bin is a self-contained IoT node and must operate for long durations without frequent maintenance.
+
+# Power Requirements
+- Support ESP32 microcontroller and LoRa transmission peaks
+- Enable long battery life (6–12 months)
+- Compact and safe
+- Cost-effective for large deployments
+
+# Ideal Battery Pack for the Waste Bin
+## Recommended Choice: Single 18650 Li-ion Battery
+- Nominal Voltage 3.7 V 
+- Capacity 2600–3400 mAh
+- Rechargeable
+- Compact
+
+# Why 18650 Li-ion is Ideal
+- Capable of handling high current bursts during LoRa transmission
+- Widely available and cost-effective
+- Suitable for compact enclosures
+- Supports long operational life with proper power management
+
+# Power Architecture of the Waste Bin
+18650 Li-ion Battery (3.7 V)
+        ↓
+Low Quiescent Current Regulator
+        ↓
+3.3 V Rail → ESP32 + Ultrasonic Sensor + LoRa Module
