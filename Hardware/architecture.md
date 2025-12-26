@@ -81,3 +81,27 @@ Each waste bin is a self-contained IoT node and must operate for long durations 
 Low Quiescent Current Regulator
         TO
 3.3 V Rail → ESP32 + Ultrasonic Sensor + LoRa Module
+
+# Network Topology Choice
+The smart waste bin monitoring system uses a star topology, where each waste bin node communicates directly with a central gateway using a long-range, low-power protocol (LoRa).
+
+In this topology, waste bins act as end nodes, gateways act as aggregation points, and all data is forwarded from the gateway to the cloud backend.
+
+# Why Star Topology is Preferred
+1. Low Power Consumption
+-Waste bins are battery-powered. In a star topology, each node only transmits its own data and does not forward data for other nodes, significantly reducing energy usage.
+
+2. Simpler Node Design
+- Nodes do not require routing logic or neighbor discovery, reducing firmware complexity and lowering the probability of software faults.
+
+3. High Scalability
+- A single LoRa gateway can support hundreds to thousands of nodes, making star topology suitable for city-wide deployments.
+
+4. Ease of Maintenance
+- Adding or removing bins does not affect other nodes. Failures are isolated and easier to diagnose.
+
+# Why Mesh Topology is NOT Used
+- Higher Power Consumption: Nodes must stay awake to relay packets for others
+- Increased Complexity: Routing, synchronization, and link management increase firmware complexity
+- Lower Reliability in Static Urban Environments: Node failure can disrupt routing paths
+- Poor Fit for Low-Data-Rate Sensors: Mesh benefits are unnecessary for small periodic data packets
